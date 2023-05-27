@@ -1,0 +1,87 @@
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    opacity: 100%;
+}
+
+
+.wrapper{
+    display: flex;
+}
+.wrapper .stat{
+    font-size: 60px;
+    font-weight: 400;
+}
+.wrapper .dyn{
+    margin-left: -20px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+.dyn li{
+    list-style: none;
+    font-size: 60px;
+    font-weight: 400;
+    position: relative;
+    top: 0;
+    animation: slide 6s steps(4) infinite;
+}
+@keyframes slide {
+    100%{
+        top: -360px;
+        
+    }
+    
+}
+.dyn li span{
+    position: relative;
+}
+
+.dyn li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 110%;
+    width: 100%;
+    background: #000;
+    border-left: 1px solid #fff;
+    animation: typing 1.5s steps(10) infinite;
+}
+
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+    
+}
+.crop{
+    overflow: hidden;
+}
+
+
+
+.animated-div {
+    
+    color: #000;
+    padding: 10px;
+    border-radius: 5px;
+    animation-name: slide-in;
+    animation-duration: 1s;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  @keyframes slide-in {
+    from {
+      transform: translateY(100%);
+    
+    }
+    to {
+      transform: translateY(0%);
+    
+    }
+  }
